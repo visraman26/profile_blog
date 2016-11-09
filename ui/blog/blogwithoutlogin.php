@@ -90,7 +90,7 @@ require "connect.php"
 
                         ?>
                         <div class="col-sm-2 text-center">
-                            <img src="../images/my1.jpg" class="img-circle" height="65" width="65" alt="">
+                            <img src="../images/user.png" class="img-circle" height="65" width="65" alt="">
                         </div>
                         <div class="col-sm-10">
                             <h4><?php echo $username ;?> <small><?php echo $time ;?></small></h4>
