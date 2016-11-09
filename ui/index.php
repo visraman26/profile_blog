@@ -39,6 +39,7 @@
                 <li><a href="#what">WHAT</a></li>
                 <li><a href="#where">WHERE</a></li>
                 <li><a  data-toggle="modal" href="#login" data-dismiss="modal">LOGIN</a> </li>
+                <li><a  data-toggle="modal" href="#signup" data-dismiss="modal">SIGN UP</a> </li>
             </ul>
         </div>
     </div>
@@ -71,6 +72,48 @@
     </div>
 
 </div>
+<!----- modal for sighup------>
+<div class="container remove">
+        <div id="signup" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Signup</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="../ui/blog/validation.php" method="post">
+                            <fieldset>
+                                <center><legend> Personal Information</legend></center>
+                                EMAIL ID <center><input   type="email" name="email" value="" size="30" required></center></br>
+                                NAME  <center><input  type="text" name="username" value="" placeholder="username" required /></center></br>
+                                PASSWORD <center><input  id="txtNewPassword" type="password" name="password" value="" placeholder="Password" required/></center></br>
+                                CONFIRM PASSWORD<center><input id="txtConfirmPassword"  type="password" name="confirmpassword"value="" placeholder="same as above" onChange="checkPasswordMatch()" required></center></br>
+                                <div  id="divCheckPasswordMatch"></div></br>
+                                PHONE NUMBER <center><input   type="number" name="phone_no" value="" maxlength="10" required></center></br>
+
+                                <input   type="submit" name="signup" value="signup"/></br></br>
+
+                            </fieldset>
+                        </form>
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!-------------------------------->
+
+
 
 <!-- First Container -->
 <div id="who" class="container-fluid bg-1 text-center">

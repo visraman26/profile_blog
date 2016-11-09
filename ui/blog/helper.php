@@ -33,6 +33,35 @@ $con=returnConnectionName();
         }
 
     }
+function do_signup($email,$username,$password,$phone_no)
+{
+    global $con;
+    $query= "SELECT email,password FROM signup Where email='$email' ";
+    $result= mysqli_query($con,$query);
+
+
+
+    if(mysqli_num_rows($result)>0)
+    {
+
+        echo "<script type='text/javascript'>
+						alert('Email already Exists');
+						window.location='../index.php';
+					</script>";
+
+    }
+    else
+    {
+        $query="INSERT INTO signup (email,`name`,password,phone_no) VALUES ('$email','$username','$password','$phone_no')";
+        $result= mysqli_query($con,$query);
+        echo "<script type='text/javascript'>
+                    alert('signup success');
+					window.location='../index.php';
+                </script>";
+    }
+
+
+}
     function insertCommentIntoDatabase($username,$comment)
     {
         global $con;
